@@ -41,7 +41,6 @@ window.I18N = {
     'meta.languages.value': 'Español · Inglés B2',
 
     'bio.1': 'Ingeniero de Software con más de <strong>3 años de experiencia en backend con Java y Spring Boot</strong>, incluyendo diseño e implementación de arquitecturas de microservicios. Actualmente ejerzo como Analista de Software, lo que ha reforzado mi visión técnica desde la perspectiva de requisitos, viabilidad y calidad arquitectónica, además del liderazgo técnico y la mentoría dentro del equipo.',
-    'bio.2': 'Fuera del trabajo mantengo <strong>/pmc</strong>, un pequeño estudio donde construyo herramientas web sin backend para autónomos y pymes: un archivo, un pago, sin servidores ni cuotas.',
 
     'label.stack': 'Stack técnico',
     'label.projects': 'Proyectos destacados',
@@ -110,13 +109,13 @@ window.I18N = {
     'edu.place': 'Mención en Ingeniería del Software',
 
     'contact.title': 'Ponte en contacto',
-    'contact.lead': 'Elige el medio que prefieras. Si es sobre una herramienta a medida, /pmc es la vía; para cualquier otra cosa, el correo directo funciona igual de bien.',
+    'contact.lead': 'Elige el medio que prefieras. El correo directo es la vía más rápida, pero también respondo por LinkedIn.',
     'contact.email.title': 'Correo directo',
     'contact.email.sub': 'pejemuci@hotmail.com',
     'contact.linkedin.title': 'LinkedIn',
     'contact.linkedin.sub': 'Perfil profesional',
-    'contact.pmc.title': '/pmc',
-    'contact.pmc.sub': 'Herramientas a medida',
+    'contact.github.title': 'GitHub',
+    'contact.github.sub': 'Código y proyectos',
     'contact.note': 'Cádiz, España · Trabajo actual en iConsulting365, Sevilla',
 
     'form.title': 'Escríbeme',
@@ -180,7 +179,6 @@ window.I18N = {
     'meta.languages.value': 'Spanish · English B2',
 
     'bio.1': 'Software Engineer with over <strong>3 years of backend experience in Java and Spring Boot</strong>, including the design and implementation of microservice architectures. I currently work as a Software Analyst, which has sharpened my technical judgement around requirements, feasibility and architectural quality, as well as technical leadership and mentoring within the team.',
-    'bio.2': 'Outside of work I run <strong>/pmc</strong>, a small studio where I build backend-free web tools for freelancers and small businesses: one file, one payment, no servers and no subscriptions.',
 
     'label.stack': 'Tech stack',
     'label.projects': 'Featured projects',
@@ -249,13 +247,13 @@ window.I18N = {
     'edu.place': 'Software Engineering specialisation',
 
     'contact.title': 'Get in touch',
-    'contact.lead': 'Pick whichever channel suits you. If it is about a custom tool, /pmc is the route; for anything else, direct email works just as well.',
+    'contact.lead': 'Pick whichever channel suits you. Direct email is the fastest route, but I also reply on LinkedIn.',
     'contact.email.title': 'Direct email',
     'contact.email.sub': 'pejemuci@hotmail.com',
     'contact.linkedin.title': 'LinkedIn',
     'contact.linkedin.sub': 'Professional profile',
-    'contact.pmc.title': '/pmc',
-    'contact.pmc.sub': 'Custom-built tools',
+    'contact.github.title': 'GitHub',
+    'contact.github.sub': 'Code and projects',
     'contact.note': 'Cádiz, Spain · Currently at iConsulting365, Seville',
 
     'form.title': 'Write to me',

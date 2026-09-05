@@ -75,7 +75,9 @@ Todos viven en `assets/i18n.js`, en los dos idiomas. Para cambiar una frase, ed�
 ### Foto de perfil
 
 Deja la imagen en `images/` como `perfil.png` (también vale `.jpg`, `.jpeg` o `.webp`) y
-ejecuta el script de abajo. Si falta, se muestra un monograma en su lugar.
+ejecuta el script de abajo. De ahí salen el avatar de la página, **los favicons**
+(`favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`) y la tarjeta de redes sociales.
+Si falta, se muestra un monograma en su lugar.
 
 ### Galería
 

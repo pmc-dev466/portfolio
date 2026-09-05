@@ -26,7 +26,7 @@
        Token de Cloudflare Web Analytics. Vacío = no se carga nada ni se
        hace ninguna petición. Lo sacas del panel de Cloudflare:
        Web Analytics → Add a site → copiar el token del snippet. */
-    cfBeaconToken: '',
+    cfBeaconToken: '457b9637545b4a049d23d80de6140795',
 
     /* ── Rol rotativo ── (los textos viven en assets/i18n.js) */
     rolePauseMs: 2600

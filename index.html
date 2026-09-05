@@ -37,8 +37,9 @@
     content="Backend con Java y Spring Boot, microservicios y análisis técnico.">
   <meta name="twitter:image" content="images/og.jpg">
 
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0d0d'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='600' fill='%23ffffff' text-anchor='middle'%3Epj%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
   <!-- El tema se fija antes del primer pintado para evitar el parpadeo blanco -->
   <script>
@@ -57,7 +58,7 @@
   <!-- Fuentes autoalojadas: sin peticiones a terceros y sin round-trip extra -->
   <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=1">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
 
   <script type="application/ld+json">
   {
@@ -70,6 +71,10 @@
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de Sevilla" },
     "worksFor": { "@type": "Organization", "name": "iConsulting365" },
     "image": "images/og.jpg",
+    "sameAs": [
+      "https://github.com/pmc-dev466",
+      "https://www.linkedin.com/in/pejemuci/"
+    ],
     "nationality": "ES",
     "knowsLanguage": ["es", "en"],
     "knowsAbout": ["Java", "Spring Boot", "Microservicios", "Arquitectura hexagonal",
@@ -174,17 +179,15 @@
         </div>
 
         <p class="prose" data-i18n-html="bio.1"></p>
-        <p class="prose" data-i18n-html="bio.2"></p>
 
         <div class="socials">
-          <!-- TODO: sustituir los href="#" por tus URLs reales -->
-          <a href="#" aria-label="GitHub" title="GitHub">
+          <a href="https://github.com/pmc-dev466" rel="noopener" target="_blank" aria-label="GitHub" title="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
                 d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5.01 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
             </svg>
           </a>
-          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/pejemuci/" rel="noopener" target="_blank" aria-label="LinkedIn" title="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
                 d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.66c0-1.35-.03-3.09-1.96-3.09-1.96 0-2.26 1.47-2.26 2.99V21h-4V9Z" />
@@ -231,6 +234,21 @@
         </div>
 
         <p class="concepts" data-i18n-html="concepts"></p>
+      </div>
+    </section>
+
+        <!-- ═══ EDUCACIÓN ══════════════════════════════════════════ -->
+    <section id="educacion">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.education">Educación</h2>
+        <article class="entry">
+          <div class="entry-head">
+            <div class="entry-role"><span data-i18n="edu.role">Grado en Ingeniería Informática</span><span
+                class="sep">·</span><span class="company">Universidad de Sevilla</span></div>
+            <div class="entry-dates" data-i18n="edu.dates">2016 — 2022</div>
+          </div>
+          <div class="entry-place" data-i18n="edu.place">Mención en Ingeniería del Software</div>
+        </article>
       </div>
     </section>
 
@@ -509,21 +527,6 @@
       </div>
     </section>
 
-    <!-- ═══ EDUCACIÓN ══════════════════════════════════════════ -->
-    <section id="educacion">
-      <div class="column">
-        <h2 class="section-label" data-i18n="label.education">Educación</h2>
-        <article class="entry">
-          <div class="entry-head">
-            <div class="entry-role"><span data-i18n="edu.role">Grado en Ingeniería Informática</span><span
-                class="sep">·</span><span class="company">Universidad de Sevilla</span></div>
-            <div class="entry-dates" data-i18n="edu.dates">2016 — 2022</div>
-          </div>
-          <div class="entry-place" data-i18n="edu.place">Mención en Ingeniería del Software</div>
-        </article>
-      </div>
-    </section>
-
     <!-- ═══ CONTACTO ═══════════════════════════════════════════ -->
     <section id="contacto">
       <div class="column">
@@ -542,7 +545,7 @@
             <div class="sub" data-i18n="contact.email.sub">pejemuci@hotmail.com</div>
           </a>
 
-          <a class="contact-card" href="#">
+          <a class="contact-card" href="https://www.linkedin.com/in/pejemuci/" rel="noopener" target="_blank">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path
                 d="M4 9h4v12H4zM6 3.2a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8ZM11 21V9h3.8v1.7c.6-1 1.9-2 3.7-2 3.4 0 4.5 2.2 4.5 5.4V21h-4v-5.6c0-1.4-.3-2.9-2-2.9s-2 1.4-2 2.8V21Z" />
@@ -551,13 +554,12 @@
             <div class="sub" data-i18n="contact.linkedin.sub">Perfil profesional</div>
           </a>
 
-          <a class="contact-card" href="https://instagram.com/pmc.dev" rel="noopener" target="_blank">
+          <a class="contact-card" href="https://github.com/pmc-dev466" rel="noopener" target="_blank">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 20V8.5A4.5 4.5 0 0 1 8.5 4H16a4 4 0 0 1 4 4v12" />
-              <path d="M8 12h8M8 16h5" />
+              <path d="M9 19c-4.3 1.3-4.3-2.2-6-2.6m12 4.6v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
             </svg>
-            <div class="title" data-i18n="contact.pmc.title">/pmc</div>
-            <div class="sub" data-i18n="contact.pmc.sub">Herramientas a medida</div>
+            <div class="title" data-i18n="contact.github.title">GitHub</div>
+            <div class="sub" data-i18n="contact.github.sub">Código y proyectos</div>
           </a>
         </div>
 
@@ -640,10 +642,10 @@
     <p class="lightbox-caption" id="lb-caption"></p>
   </div>
 
-  <script src="assets/sfx.js?v=1"></script>
-  <script src="assets/gallery.js?v=1"></script>
-  <script src="assets/i18n.js?v=1"></script>
-  <script src="assets/app.js?v=1"></script>
+  <script src="assets/sfx.js?v=3"></script>
+  <script src="assets/gallery.js?v=3"></script>
+  <script src="assets/i18n.js?v=3"></script>
+  <script src="assets/app.js?v=3"></script>
 
 </body>
 

@@ -160,6 +160,32 @@ def build_avatar() -> None:
           f"{dest.name}  {dest.stat().st_size / 1e3:.0f} KB\n")
 
 
+def build_favicons() -> None:
+    """Iconos de pestaña y de pantalla de inicio, a partir de la misma foto.
+
+    Se genera un .ico multirresolución porque los navegadores lo piden en
+    /favicon.ico aunque no lo declares, y un PNG grande para iOS."""
+    images = HERE.parent / "images"
+    source = images / "avatar.webp"
+    if not source.is_file():
+        print("Sin avatar.webp: no se generan favicons.\n")
+        return
+
+    with Image.open(source) as img:
+        img = img.convert("RGB")
+
+        ico = HERE.parent / "favicon.ico"
+        img.save(ico, "ICO", sizes=[(16, 16), (32, 32), (48, 48)])
+
+        png32 = images / "favicon-32.png"
+        img.resize((32, 32), Image.LANCZOS).save(png32, "PNG", optimize=True)
+
+        apple = images / "apple-touch-icon.png"
+        img.resize((180, 180), Image.LANCZOS).save(apple, "PNG", optimize=True)
+
+    print(f"Favicons: favicon.ico + favicon-32.png + apple-touch-icon.png\n")
+
+
 def load_font(size: int, bold: bool = False):
     """Fuente del sistema para la tarjeta social. Si no hay ninguna,
     se usa la de Pillow y la tarjeta sale igual, solo que más sosa."""
@@ -225,6 +251,7 @@ def build_og() -> None:
 
 def main() -> None:
     build_avatar()
+    build_favicons()
     build_og()
 
     if not ART.is_dir():
