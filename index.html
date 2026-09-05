@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Jesús Muñoz Cifuentes — Software Engineer</title>
+
+  <meta name="description"
+    content="Ingeniero de Software con más de 3 años de experiencia en backend con Java y Spring Boot, arquitecturas de microservicios y análisis técnico. Cádiz, España.">
+  <meta name="author" content="Pedro Jesús Muñoz Cifuentes">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- ── Redes sociales ──
+       Cuando tengas dominio, descomenta las dos líneas absolutas de abajo y
+       pon el tuyo. Sin dominio es MEJOR omitirlas: un canonical apuntando a
+       una URL que no existe es peor que no tener canonical. -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Pedro Jesús Muñoz Cifuentes">
+  <meta property="og:title" content="Pedro Jesús Muñoz Cifuentes — Software Engineer">
+  <meta property="og:description"
+    content="Backend con Java y Spring Boot, microservicios y análisis técnico. Además construyo herramientas web sin backend en /pmc.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:image" content="images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pedro Jesús Muñoz Cifuentes, Software Engineer">
+  <!-- <link rel="canonical" href="https://TU-DOMINIO/"> -->
+  <!-- <meta property="og:url" content="https://TU-DOMINIO/"> -->
+  <!-- <meta property="og:image" content="https://TU-DOMINIO/images/og.jpg"> -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pedro Jesús Muñoz Cifuentes — Software Engineer">
+  <meta name="twitter:description"
+    content="Backend con Java y Spring Boot, microservicios y análisis técnico.">
+  <meta name="twitter:image" content="images/og.jpg">
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d0d0d'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='600' fill='%23ffffff' text-anchor='middle'%3Epj%3C/text%3E%3C/svg%3E">
+
+  <!-- El tema se fija antes del primer pintado para evitar el parpadeo blanco -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <!-- Fuentes autoalojadas: sin peticiones a terceros y sin round-trip extra -->
+  <link rel="preload" href="fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css?v=1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pedro Jesús Muñoz Cifuentes",
+    "jobTitle": "Software Engineer",
+    "email": "pejemuci@hotmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cádiz", "addressCountry": "ES" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de Sevilla" },
+    "worksFor": { "@type": "Organization", "name": "iConsulting365" },
+    "image": "images/og.jpg",
+    "nationality": "ES",
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": ["Java", "Spring Boot", "Microservicios", "Arquitectura hexagonal",
+                   "APIs REST", "Docker", "Oracle SQL", "MongoDB", "Azure Pipelines", "Scrum"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <div class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <nav class="topnav" aria-label="Navegación principal">
+        <a href="#perfil" data-i18n="nav.profile">Perfil</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+        <a href="#experiencia" data-i18n="nav.experience">Experiencia</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="topbar-tools">
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <button type="button" data-lang="es" aria-pressed="true" data-i18n-title="a11y.langES">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false" data-i18n-title="a11y.langEN">EN</button>
+        </div>
+        <button type="button" class="icon-btn" id="sfx-btn" aria-pressed="false" data-i18n-title="a11y.sound" title="Sonido">
+          <svg class="sfx-on" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 9v6h4l5 4V5L8 9H4Z" /><path d="M16.5 8.5a5 5 0 0 1 0 7" />
+          </svg>
+          <svg class="sfx-off" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 9v6h4l5 4V5L8 9H4Z" /><path d="m17 10 4 4M21 10l-4 4" />
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" id="theme-btn" data-i18n-title="a11y.theme" title="Cambiar tema">
+          <svg class="moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+          </svg>
+          <svg class="sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ═══ PERFIL ═════════════════════════════════════════════ -->
+    <section class="profile" id="perfil">
+      <div class="column">
+
+        <div class="profile-head">
+          <!-- Sustituye images/perfil.png por tu foto; si falta, sale el monograma -->
+          <span class="avatar">
+            <img src="images/avatar.webp" alt="Pedro Jesús Muñoz Cifuentes" id="avatar-img" hidden>
+            <span class="fallback" id="avatar-fallback" aria-hidden="true">pj</span>
+          </span>
+          <h1 class="display">Pedro Jesús Muñoz&nbsp;Cifuentes</h1>
+        </div>
+
+        <div class="role-rotator">
+          <span class="prefix">&gt;</span>
+          <span class="slot" id="role-slot" aria-live="polite">Software Engineer</span>
+        </div>
+
+        <div class="meta-grid">
+          <div>
+            <div class="meta-label" data-i18n="meta.location">Ubicación</div>
+            <div class="meta-value">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span data-i18n="meta.location.value">Cádiz, España</span>
+            </div>
+          </div>
+          <div>
+            <div class="meta-label" data-i18n="meta.email">Email</div>
+            <div class="meta-value">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3.5 7 8.5 6 8.5-6" />
+              </svg>
+              <a href="mailto:pejemuci@hotmail.com">pejemuci@hotmail.com</a>
+            </div>
+          </div>
+          <div>
+            <div class="meta-label" data-i18n="meta.languages">Idiomas</div>
+            <div class="meta-value">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3Z" />
+              </svg>
+              <span data-i18n="meta.languages.value">Español · Inglés B2</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="prose" data-i18n-html="bio.1"></p>
+        <p class="prose" data-i18n-html="bio.2"></p>
+
+        <div class="socials">
+          <!-- TODO: sustituir los href="#" por tus URLs reales -->
+          <a href="#" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5.01 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.66c0-1.35-.03-3.09-1.96-3.09-1.96 0-2.26 1.47-2.26 2.99V21h-4V9Z" />
+            </svg>
+          </a>
+          <a href="mailto:pejemuci@hotmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3.5 7 8.5 6 8.5-6" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ STACK ══════════════════════════════════════════════ -->
+    <section id="stack">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.stack">Stack técnico</h2>
+
+        <div class="tech-grid">
+          <img src="icons/java.svg" alt="Java" title="Java 21 / Java 8" loading="lazy">
+          <img src="icons/spring.svg" alt="Spring" title="Spring Boot · MVC · Security · Data" loading="lazy">
+          <img src="icons/hibernate.svg" alt="Hibernate" title="JPA / Hibernate" loading="lazy">
+          <img src="icons/oracle.svg" alt="Oracle" title="Oracle SQL" loading="lazy">
+          <img src="icons/mongodb.svg" alt="MongoDB" title="MongoDB" loading="lazy">
+          <img src="icons/docker.svg" alt="Docker" title="Docker" loading="lazy">
+          <img src="icons/azuredevops.svg" alt="Azure DevOps" title="Azure Pipelines · Azure Boards" loading="lazy">
+          <img src="icons/git.svg" alt="Git" title="Git" loading="lazy">
+          <img src="icons/junit.svg" alt="JUnit" title="JUnit" loading="lazy">
+          <img src="icons/sonarqube.svg" alt="SonarQube" title="SonarQube" loading="lazy">
+          <img src="icons/angular.svg" alt="Angular" title="Angular" loading="lazy">
+          <img src="icons/react.svg" alt="React" title="React" loading="lazy">
+          <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+          <img src="icons/html5.svg" alt="HTML5" title="HTML5" loading="lazy">
+          <img src="icons/css3.svg" alt="CSS3" title="CSS3" loading="lazy">
+          <img src="icons/jira.svg" alt="Jira" title="Jira" loading="lazy">
+          <img src="icons/confluence.svg" alt="Confluence" title="Confluence" loading="lazy">
+          <img src="icons/postman.svg" alt="Postman" title="Postman" loading="lazy">
+          <img src="icons/intellij.svg" alt="IntelliJ IDEA" title="IntelliJ IDEA" loading="lazy">
+          <img src="icons/vscode.svg" alt="VS Code" title="Visual Studio Code" loading="lazy">
+        </div>
+
+        <p class="concepts" data-i18n-html="concepts"></p>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCIA ════════════════════════════════════════ -->
+    <section id="experiencia">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.experience">Experiencia</h2>
+
+        <article class="entry current">
+          <div class="entry-head">
+            <div class="entry-role"><span data-i18n="exp.1.role">Analista de Software</span><span
+                class="sep">·</span><span class="company">iConsulting365</span></div>
+            <div class="entry-dates" data-i18n="exp.1.dates">06/2025 — Actual</div>
+          </div>
+          <div class="entry-place" data-i18n="exp.1.place">Sevilla, España</div>
+          <p data-i18n="exp.1.p"></p>
+          <ul>
+            <li data-i18n="exp.1.li1"></li>
+            <li data-i18n="exp.1.li2"></li>
+            <li data-i18n="exp.1.li3"></li>
+            <li data-i18n="exp.1.li4"></li>
+            <li data-i18n="exp.1.li5"></li>
+          </ul>
+          <div class="tech-row">
+            <img src="icons/java.svg" alt="Java" title="Java" loading="lazy">
+            <img src="icons/spring.svg" alt="Spring" title="Spring" loading="lazy">
+            <img src="icons/confluence.svg" alt="Confluence" title="Confluence" loading="lazy">
+            <img src="icons/jira.svg" alt="Jira" title="Jira" loading="lazy">
+            <span class="plain" data-i18n="exp.1.plain">Hexagonal · APIs REST · Scrum</span>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <div class="entry-role"><span data-i18n="exp.2.role">Desarrollador de Software</span><span
+                class="sep">·</span><span class="company">iConsulting365</span></div>
+            <div class="entry-dates" data-i18n="exp.2.dates">10/2022 — 06/2025</div>
+          </div>
+          <div class="entry-place" data-i18n="exp.2.place">Sevilla, España</div>
+          <p data-i18n="exp.2.p"></p>
+          <ul>
+            <li data-i18n="exp.2.li1"></li>
+            <li data-i18n="exp.2.li2"></li>
+            <li data-i18n="exp.2.li3"></li>
+            <li data-i18n="exp.2.li4"></li>
+            <li data-i18n="exp.2.li5"></li>
+            <li data-i18n="exp.2.li6"></li>
+          </ul>
+          <div class="tech-row">
+            <img src="icons/java.svg" alt="Java" title="Java 21" loading="lazy">
+            <img src="icons/spring.svg" alt="Spring Boot" title="Spring Boot" loading="lazy">
+            <img src="icons/hibernate.svg" alt="Hibernate" title="JPA / Hibernate" loading="lazy">
+            <img src="icons/oracle.svg" alt="Oracle" title="Oracle SQL" loading="lazy">
+            <img src="icons/mongodb.svg" alt="MongoDB" title="MongoDB" loading="lazy">
+            <img src="icons/docker.svg" alt="Docker" title="Docker" loading="lazy">
+            <img src="icons/azuredevops.svg" alt="Azure Pipelines" title="Azure Pipelines" loading="lazy">
+            <img src="icons/junit.svg" alt="JUnit" title="JUnit" loading="lazy">
+            <img src="icons/sonarqube.svg" alt="SonarQube" title="SonarQube" loading="lazy">
+            <img src="icons/angular.svg" alt="Angular" title="Angular" loading="lazy">
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <div class="entry-role"><span data-i18n="exp.3.role">Profesional de Hostelería</span><span
+                class="sep">·</span><span class="company">Restaurante La Fontanilla</span></div>
+            <div class="entry-dates" data-i18n="exp.3.dates">01/2019 — 08/2022</div>
+          </div>
+          <div class="entry-place" data-i18n="exp.3.place">Conil de la Frontera, España</div>
+          <p data-i18n="exp.3.p"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ PROYECTOS ══════════════════════════════════════════ -->
+    <section id="proyectos">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.projects">Proyectos destacados</h2>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/quotecraft04.webp" width="1400" height="657" alt="QuoteCraft" loading="lazy" decoding="async">
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>QuoteCraft</h3>
+                <div class="card-links">
+                  <span data-i18n-title="link.pending" title="Enlace pendiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="card-status live"><span class="dot"></span><span data-i18n="status.live">Listo para uso</span>
+              </div>
+              <p data-i18n="proj.quotecraft.desc"></p>
+              <div class="tech-row">
+                <img src="icons/react.svg" alt="React" title="React" loading="lazy">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <img src="icons/css3.svg" alt="CSS3" title="CSS3" loading="lazy">
+                <span class="plain">jsPDF</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/exceldash05.webp" width="1400" height="673" alt="ExcelDash" loading="lazy" decoding="async">
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>ExcelDash</h3>
+                <div class="card-links">
+                  <span data-i18n-title="link.pending" title="Enlace pendiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="card-status"><span class="dot"></span><span data-i18n="status.testing">En testing</span></div>
+              <p data-i18n="proj.exceldash.desc"></p>
+              <div class="tech-row">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <img src="icons/html5.svg" alt="HTML5" title="HTML5" loading="lazy">
+                <span class="plain">SheetJS · Chart.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/stockbase01.webp" width="1400" height="657" alt="StockBase" loading="lazy" decoding="async">
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>StockBase</h3>
+                <div class="card-links">
+                  <span data-i18n-title="link.pending" title="Enlace pendiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="card-status live"><span class="dot"></span><span data-i18n="status.live">Listo para uso</span>
+              </div>
+              <p data-i18n="proj.stockbase.desc"></p>
+              <div class="tech-row">
+                <img src="icons/react.svg" alt="React" title="React" loading="lazy">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <span class="plain">localStorage</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/pomcasio01.webp" width="699" height="699" alt="Pomcasio" loading="lazy" decoding="async">
+            </div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>Pomcasio</h3>
+                <div class="card-links">
+                  <span data-i18n-title="link.pending" title="Enlace pendiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="card-status"><span class="dot"></span><span data-i18n="status.internal">Uso interno</span>
+              </div>
+              <p data-i18n="proj.pomcasio.desc"></p>
+              <div class="tech-row">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <img src="icons/html5.svg" alt="HTML5" title="HTML5" loading="lazy">
+                <img src="icons/css3.svg" alt="CSS3" title="CSS3" loading="lazy">
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIMENTOS 3D ════════════════════════════════════ -->
+    <section id="lab">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.lab">Experimentos 3D</h2>
+        <p class="prose" style="margin-bottom: var(--sp-md);" data-i18n="lab.lead"></p>
+
+        <div class="cards">
+          <!-- TODO: reemplazar por los portfolios 3D reales -->
+          <article class="card">
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 data-i18n="lab.card1.title">Portfolio 3D · pendiente</h3>
+              </div>
+              <div class="card-status"><span class="dot"></span><span data-i18n="status.pending">Por enlazar</span>
+              </div>
+              <p data-i18n="lab.card1.desc"></p>
+              <div class="tech-row">
+                <img src="icons/threejs.svg" alt="Three.js" title="Three.js" loading="lazy">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <span class="plain">WebGL</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 data-i18n="lab.card2.title">Portfolio 3D · pendiente</h3>
+              </div>
+              <div class="card-status"><span class="dot"></span><span data-i18n="status.pending">Por enlazar</span>
+              </div>
+              <p data-i18n="lab.card2.desc"></p>
+              <div class="tech-row">
+                <img src="icons/threejs.svg" alt="Three.js" title="Three.js" loading="lazy">
+                <img src="icons/javascript.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                <span class="plain">WebGL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GALERÍA · MIDJOURNEY ═══════════════════════════════ -->
+    <section id="galeria">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.gallery">Galería · Midjourney</h2>
+        <p class="prose" style="margin-bottom: var(--sp-md);" data-i18n="gallery.lead"></p>
+
+        <div class="gallery" id="gallery"></div>
+        <p class="gallery-hint" id="gallery-hint"></p>
+      </div>
+    </section>
+
+    <!-- ═══ MÚSICA ═════════════════════════════════════════════ -->
+    <section id="musica">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.music">En bucle</h2>
+        <p class="prose" style="margin-bottom: var(--sp-md);" data-i18n="music.lead"></p>
+
+        <div class="music-grid">
+
+          <!-- PLAYLIST 1 ─────────────────────────────────────────────
+               Para cambiarla: en Spotify, Compartir -> Insertar playlist,
+               copias el iframe y sustituyes este bloque entero. -->
+          <iframe src="https://open.spotify.com/embed/playlist/5l9xLTLeAGlrDMTBtbjDfg?utm_source=generator" width="100%"
+            height="352" frameborder="0" loading="lazy" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            title="Playlist en Spotify"></iframe>
+
+          <!-- PLAYLIST 2 ─────────────────────────────────────────────
+               Sustituye este div por otro iframe igual que el de arriba. -->
+          <iframe data-testid="embed-iframe" style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/5xJjjDX0oIvMQpyoOrngAy?utm_source=generator&theme=0&si=14a3c5f7b57840a3"
+            width="100%" height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EDUCACIÓN ══════════════════════════════════════════ -->
+    <section id="educacion">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.education">Educación</h2>
+        <article class="entry">
+          <div class="entry-head">
+            <div class="entry-role"><span data-i18n="edu.role">Grado en Ingeniería Informática</span><span
+                class="sep">·</span><span class="company">Universidad de Sevilla</span></div>
+            <div class="entry-dates" data-i18n="edu.dates">2016 — 2022</div>
+          </div>
+          <div class="entry-place" data-i18n="edu.place">Mención en Ingeniería del Software</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACTO ═══════════════════════════════════════════ -->
+    <section id="contacto">
+      <div class="column">
+        <h2 class="section-label" data-i18n="label.contact">Hablemos</h2>
+
+        <h3 class="contact-title" data-i18n="contact.title">Ponte en contacto</h3>
+        <p class="prose contact-lead" data-i18n="contact.lead"></p>
+
+        <div class="contact-list">
+          <a class="contact-card" href="mailto:pejemuci@hotmail.com">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3.5 7 8.5 6 8.5-6" />
+            </svg>
+            <div class="title" data-i18n="contact.email.title">Correo directo</div>
+            <div class="sub" data-i18n="contact.email.sub">pejemuci@hotmail.com</div>
+          </a>
+
+          <a class="contact-card" href="#">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M4 9h4v12H4zM6 3.2a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8ZM11 21V9h3.8v1.7c.6-1 1.9-2 3.7-2 3.4 0 4.5 2.2 4.5 5.4V21h-4v-5.6c0-1.4-.3-2.9-2-2.9s-2 1.4-2 2.8V21Z" />
+            </svg>
+            <div class="title" data-i18n="contact.linkedin.title">LinkedIn</div>
+            <div class="sub" data-i18n="contact.linkedin.sub">Perfil profesional</div>
+          </a>
+
+          <a class="contact-card" href="https://instagram.com/pmc.dev" rel="noopener" target="_blank">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20V8.5A4.5 4.5 0 0 1 8.5 4H16a4 4 0 0 1 4 4v12" />
+              <path d="M8 12h8M8 16h5" />
+            </svg>
+            <div class="title" data-i18n="contact.pmc.title">/pmc</div>
+            <div class="sub" data-i18n="contact.pmc.sub">Herramientas a medida</div>
+          </a>
+        </div>
+
+        <p class="contact-note" data-i18n="contact.note"></p>
+
+        <div class="form-panel">
+          <h3 data-i18n="form.title">Escríbeme</h3>
+          <p class="hint" data-i18n="form.hint"></p>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name" data-i18n="form.name">Nombre</label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" data-i18n-ph="form.name.ph" required>
+            </div>
+            <div class="field">
+              <label for="cf-email" data-i18n="form.email">Email</label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" data-i18n-ph="form.email.ph" required>
+            </div>
+            <div class="field">
+              <label for="cf-message" data-i18n="form.message">Mensaje</label>
+              <textarea id="cf-message" name="message" data-i18n-ph="form.message.ph" required></textarea>
+            </div>
+
+            <!-- Trampa antispam: si se rellena, no se envía -->
+            <input type="text" name="botcheck" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+
+            <button class="btn" type="submit" id="cf-submit">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 3 10.5 13.5M21 3l-6.8 18-3.7-7.5L3 9.8 21 3Z" />
+              </svg>
+              <span data-i18n="form.submit">Enviar mensaje</span>
+            </button>
+
+            <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CIERRE ═════════════════════════════════════════════ -->
+    <section class="closing">
+      <div class="column">
+        <blockquote data-i18n="quote"></blockquote>
+        <cite data-i18n="quote.author"></cite>
+        <p class="visitor" id="visitor"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span data-i18n="footer.rights">© 2026 Pedro Jesús Muñoz Cifuentes</span>
+      <div class="footer-links">
+        <a href="#perfil" data-i18n="nav.profile">Perfil</a>
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ VISOR DE GALERÍA ═════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería">
+    <button type="button" class="lightbox-btn lightbox-close" id="lb-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" id="lb-prev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7" />
+      </svg>
+    </button>
+    <img id="lb-img" alt="">
+    <button type="button" class="lightbox-btn lightbox-next" id="lb-next" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+    <p class="lightbox-caption" id="lb-caption"></p>
+  </div>
+
+  <script src="assets/sfx.js?v=1"></script>
+  <script src="assets/gallery.js?v=1"></script>
+  <script src="assets/i18n.js?v=1"></script>
+  <script src="assets/app.js?v=1"></script>
+
+</body>
+
+</html>

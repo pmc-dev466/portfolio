@@ -1,0 +1,19 @@
+# Originales pesados: NO hacen falta en el despliegue.
+# La web sirve solo las versiones optimizadas que genera
+# tools/build-gallery.py, y esas sí se suben.
+images/arte/*.png
+images/arte/*.jpg
+images/arte/*.jpeg
+images/arte/*.tiff
+images/arte/*.bmp
+!images/arte/web/
+
+# Foto de perfil original: la web carga images/avatar.webp
+images/perfil.*
+images/avatar.png
+
+# Capturas de producto en PNG: se sirven en .webp
+images/exceldash05.png
+images/quotecraft04.png
+images/stockbase01.png
+images/pomcasio01.png
