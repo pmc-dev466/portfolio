@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Cambia el dominio cuando esté decidido
-# Sitemap: https://TU-DOMINIO/sitemap.xml
+Sitemap: https://pjmc.pages.dev/sitemap.xml

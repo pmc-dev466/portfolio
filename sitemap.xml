@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Cambia TU-DOMINIO por el definitivo y descomenta la línea Sitemap
-  en robots.txt. Sin dominio, este archivo no sirve de nada.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://TU-DOMINIO/</loc>
+    <loc>https://pjmc.pages.dev/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

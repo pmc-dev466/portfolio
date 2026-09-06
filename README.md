@@ -132,6 +132,11 @@ Cloudflare Pages, sin build:
 Si el repositorio contuviera este proyecto dentro de una subcarpeta, esa subcarpeta sería
 el *output directory*.
 
+En producción: <https://pjmc.pages.dev>. Ese dominio aparece en `canonical`, `og:url`,
+`og:image`, `twitter:image`, el JSON-LD, `sitemap.xml` y `robots.txt`. **Al pasar a
+dominio propio hay que cambiarlo en esos siete sitios** y dejar una redirección desde
+el antiguo.
+
 > **Al cambiar CSS o JS, sube el número de `?v=` en los `<script>` y el `<link>` de
 > `index.html` y `404.html`.** Sin eso, quien ya haya visitado seguirá viendo la versión
 > cacheada.
