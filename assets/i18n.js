@@ -44,7 +44,6 @@ window.I18N = {
 
     'label.stack': 'Stack técnico',
     'label.projects': 'Proyectos destacados',
-    'label.lab': 'Experimentos 3D',
     'label.gallery': 'Galería · Midjourney',
     'label.music': 'En bucle',
     'label.experience': 'Experiencia',
@@ -59,16 +58,15 @@ window.I18N = {
     'status.pending': 'Por enlazar',
     'link.pending': 'Enlace pendiente',
 
-    'proj.quotecraft.desc': 'Presupuestos y facturas para autónomos y pymes con validación de NIF, DNI y CIF españoles, numeración automática y exportación a PDF. Todo se guarda en local.',
-    'proj.exceldash.desc': 'Convierte cualquier Excel o CSV en un dashboard con KPIs, gráficos y filtros cruzados. Todo el procesamiento ocurre en el navegador: los datos nunca salen del equipo.',
-    'proj.stockbase.desc': 'Control de inventario para pequeños negocios: entradas y salidas, alertas de stock mínimo y valorización automática, sin necesidad de montar un ERP.',
-    'proj.pomcasio.desc': 'Temporizador Pomodoro con estética de reloj Casio clásico: selector de tareas, modo ZEN y métricas de actividad diaria. Sin cookies de terceros.',
 
-    'lab.lead': 'Versiones alternativas de este mismo portfolio construidas con Three.js. Mismo contenido, otra forma de recorrerlo.',
-    'lab.card1.title': 'Portfolio 3D · pendiente',
-    'lab.card1.desc': 'Hueco reservado para la primera variante en Three.js. Pásame la URL y el título y lo conecto.',
-    'lab.card2.title': 'Portfolio 3D · pendiente',
-    'lab.card2.desc': 'Segunda variante. Misma estructura de card, lista para recibir captura y enlace.',
+    'proj.portfolio.desc': 'Este mismo sitio. HTML, CSS y JavaScript sin framework ni compilación: tema claro y oscuro, dos idiomas, galería con visor y una 404 con un Snake jugable.',
+    'proj.portfolio3d.desc': 'Portfolio navegable en tres dimensiones: pilotas una nave entre planetas-sección y vas descubriendo experiencia, stack y proyectos. Con tour guiado y bilingüe.',
+    'proj.portfolio3dv2.desc': 'Segunda versión del portfolio en 3D, planteada como un recorrido: pilotas la nave a través de seis fases —espacio profundo, campo de asteroides, nebulosa, entrada atmosférica, estación derelicta y llegada— y cada tramo revela una sección. Veinte modelos propios y post-procesado con bloom.',
+    'proj.bookatme.desc': 'Comparador de los libros más vendidos de Amazon.es: 24 fichas con datos reales, pros y contras y nota de calidad-precio. Las 40 páginas se generan desde un único JSON con Python.',
+    'proj.gastos.desc': 'Control de gastos en un solo archivo HTML, sin dependencias. Presupuestos, metas de ahorro, movimientos recurrentes y exportación a CSV. Todo se guarda en el navegador: los datos nunca salen de tu equipo.',
+    'status.production': 'En producción',
+    'status.wip': 'Subiendo el código',
+
 
     'gallery.lead': 'El diseño y la imagen me interesan tanto como el código. Estas son piezas generadas con Midjourney y afinadas a mano.',
     'gallery.empty': 'Hueco libre',
@@ -182,7 +180,6 @@ window.I18N = {
 
     'label.stack': 'Tech stack',
     'label.projects': 'Featured projects',
-    'label.lab': '3D experiments',
     'label.gallery': 'Gallery · Midjourney',
     'label.music': 'On repeat',
     'label.experience': 'Experience',
@@ -197,16 +194,15 @@ window.I18N = {
     'status.pending': 'To be linked',
     'link.pending': 'Link pending',
 
-    'proj.quotecraft.desc': 'Quotes and invoices for freelancers and small businesses, with Spanish tax-ID validation, automatic numbering and PDF export. Everything is stored locally.',
-    'proj.exceldash.desc': 'Turns any Excel or CSV file into a dashboard with KPIs, charts and cross-filters. All processing happens in the browser: the data never leaves the machine.',
-    'proj.stockbase.desc': 'Inventory control for small businesses: stock in and out, low-stock alerts and automatic valuation, without setting up an ERP.',
-    'proj.pomcasio.desc': 'A Pomodoro timer styled after a classic Casio watch: task picker, ZEN mode and daily activity metrics. No third-party cookies.',
 
-    'lab.lead': 'Alternative versions of this same portfolio built with Three.js. Same content, a different way to move through it.',
-    'lab.card1.title': '3D portfolio · pending',
-    'lab.card1.desc': 'Reserved slot for the first Three.js variant. Send me the URL and the title and I will wire it up.',
-    'lab.card2.title': '3D portfolio · pending',
-    'lab.card2.desc': 'Second variant. Same card structure, ready for a screenshot and a link.',
+    'proj.portfolio.desc': 'This very site. HTML, CSS and JavaScript with no framework and no build step: light and dark themes, two languages, a gallery with a lightbox and a 404 with a playable Snake.',
+    'proj.portfolio3d.desc': 'A portfolio you fly through: pilot a ship between planet-sections and discover experience, stack and projects along the way. Guided tour, in two languages.',
+    'proj.portfolio3dv2.desc': 'The second take on the 3D portfolio, built as a journey: pilot the ship through six phases — deep space, asteroid field, nebula, atmospheric entry, derelict station and arrival — and each leg reveals a section. Twenty custom models and bloom post-processing.',
+    'proj.bookatme.desc': 'A comparison site for Amazon.es bestsellers: 24 entries with real data, pros and cons and a value-for-money score. All 40 pages are generated from a single JSON with Python.',
+    'proj.gastos.desc': 'Expense tracking in a single HTML file, no dependencies. Budgets, savings goals, recurring entries and CSV export. Everything is stored in the browser: the data never leaves your machine.',
+    'status.production': 'Live',
+    'status.wip': 'Pushing the code',
+
 
     'gallery.lead': 'Design and imagery interest me as much as code. These are pieces generated with Midjourney and tuned by hand.',
     'gallery.empty': 'Empty slot',

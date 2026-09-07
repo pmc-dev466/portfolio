@@ -113,6 +113,21 @@ const CONFIG = {
 };
 ```
 
+### Proyectos
+
+Las cards viven en `index.html`, en `<section id="proyectos">`; sus textos en
+`assets/i18n.js` (`proj.<nombre>.desc`).
+
+Para la imagen: deja una captura en `images/proyectos/` con el nombre del proyecto y
+ejecuta `python tools/build-gallery.py`. Se optimiza sola a `images/proyectos/web/`.
+
+**Las capturas verticales (de móvil) se componen automáticamente** sobre el lienzo
+apaisado de la card: escaladas enteras, con esquinas redondeadas y sombra, sobre un
+fondo tomado del color de la propia app. Sin eso, `object-fit: cover` las recortaría
+a una franja.
+
+> Cuidado con lo que sale en las capturas: van a una página pública e indexable.
+
 ### Playlists de Spotify
 
 Los reproductores están escritos directamente en `index.html`, en

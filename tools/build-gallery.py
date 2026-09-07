@@ -25,7 +25,7 @@ import unicodedata
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageDraw, ImageFont
+    from PIL import Image, ImageDraw, ImageFont, ImageFilter
 except ImportError:
     sys.exit("Falta Pillow. Instálalo con:  python -m pip install Pillow")
 
@@ -160,6 +160,86 @@ def build_avatar() -> None:
           f"{dest.name}  {dest.stat().st_size / 1e3:.0f} KB\n")
 
 
+CARD_W, CARD_H = 900, 563          # 16:10, el marco de las cards
+
+
+def compose_portrait(img: Image.Image) -> Image.Image:
+    """Encaja una captura vertical en el lienzo apaisado de la card.
+
+    La escala para que quepa entera, le redondea las esquinas y la apoya sobre
+    un fondo tomado del propio color de la app, con una sombra suave para
+    despegarla. Así se ve el móvil completo en vez de una franja recortada."""
+    # Fondo: media de las cuatro esquinas, que suele ser el color de la app
+    w, h = img.size
+    corners = [img.getpixel(p) for p in ((2, 2), (w - 3, 2), (2, h - 3), (w - 3, h - 3))]
+    bg = tuple(sum(c[i] for c in corners) // 4 for i in range(3))
+
+    canvas = Image.new("RGB", (CARD_W, CARD_H), bg)
+
+    # La captura ocupa el 88% del alto, dejando aire arriba y abajo
+    target_h = int(CARD_H * 0.88)
+    scale = target_h / h
+    shot = img.resize((max(1, int(w * scale)), target_h), Image.LANCZOS)
+    x = (CARD_W - shot.width) // 2
+    y = (CARD_H - shot.height) // 2
+
+    radius = 14
+    mask = Image.new("L", shot.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, shot.width - 1, shot.height - 1],
+                                           radius=radius, fill=255)
+
+    # Sombra: la misma silueta, desenfocada y desplazada hacia abajo
+    shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle(
+        [x, y + 6, x + shot.width, y + shot.height + 6], radius=radius, fill=(0, 0, 0, 70))
+    canvas = Image.alpha_composite(
+        canvas.convert("RGBA"), shadow.filter(ImageFilter.GaussianBlur(14))).convert("RGB")
+
+    canvas.paste(shot, (x, y), mask)
+    return canvas
+
+
+def build_projects() -> None:
+    """images/proyectos/*.png|jpg → images/proyectos/web/<nombre>.webp
+
+    Capturas de las cards de proyecto. Se muestran a ~420 px de ancho, así que
+    900 px sobra. Los originales se quedan donde están."""
+    src_dir = HERE.parent / "images" / "proyectos"
+    if not src_dir.is_dir():
+        return
+
+    out = src_dir / "web"
+    out.mkdir(exist_ok=True)
+
+    sources = sorted(
+        p for p in src_dir.iterdir()
+        if p.is_file() and p.suffix.lower() in EXT and not p.name.startswith(("_", "."))
+    )
+    if not sources:
+        print("Sin capturas en images/proyectos/.\n")
+        return
+
+    antes = despues = 0
+    for src in sources:
+        dest = out / f"{src.stem}.webp"
+        with Image.open(src) as img:
+            img = img.convert("RGB")
+            if img.height > img.width:
+                # Captura de móvil: la card es 16:10 y con `cover` se recortaría
+                # a una tira. Se compone centrada sobre un lienzo apaisado.
+                compose_portrait(img).save(dest, "WEBP", quality=82, method=6)
+                nota = "  (vertical → compuesta)"
+            else:
+                save_variant(img, dest, 900, 80)
+                nota = ""
+        antes += src.stat().st_size
+        despues += dest.stat().st_size
+        print(f"  · {src.stem}: {src.stat().st_size / 1e3:.0f} KB → "
+              f"{dest.stat().st_size / 1e3:.0f} KB{nota}")
+
+    print(f"Capturas de proyecto: {antes / 1e3:.0f} KB → {despues / 1e3:.0f} KB\n")
+
+
 def build_favicons() -> None:
     """Iconos de pestaña y de pantalla de inicio, a partir de la misma foto.
 
@@ -252,6 +332,7 @@ def build_og() -> None:
 def main() -> None:
     build_avatar()
     build_favicons()
+    build_projects()
     build_og()
 
     if not ART.is_dir():
