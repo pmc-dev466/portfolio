@@ -67,10 +67,25 @@ Y abrir <http://localhost:4175>.
 
 ## Actualizar contenido
 
+> ### ⚠️ Lo primero que hay que saber
+>
+> **Todo el texto que se lee en pantalla está en `assets/i18n.js`, no en `index.html`.**
+>
+> En el HTML esos párrafos son huecos vacíos: `<p data-i18n-html="bio.1"></p>`. El texto
+> lo inserta JavaScript, que es lo que permite cambiar de idioma sin recargar.
+>
+> Si editas una frase en `index.html` y no la ves cambiar, es por esto. En el HTML solo
+> están la estructura y los **metadatos para buscadores** (`<title>`, `description`,
+> Open Graph), que sí llevan texto propio y hay que mantener en sintonía a mano.
+
 ### Textos
 
-Todos viven en `assets/i18n.js`, en los dos idiomas. Para cambiar una frase, edítala en
-`es` y en `en`.
+Todos viven en `assets/i18n.js`, **en los dos idiomas**. Para cambiar una frase, edítala
+en el bloque `es` y en el `en`.
+
+Después de tocar `i18n.js` —o cualquier CSS o JS— **sube el número de `?v=`** en
+`index.html` y `404.html`, o los visitantes que ya hayan entrado seguirán viendo la
+versión cacheada.
 
 ### Foto de perfil
 

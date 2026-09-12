@@ -40,7 +40,7 @@ window.I18N = {
     'meta.languages': 'Idiomas',
     'meta.languages.value': 'Español · Inglés B2',
 
-    'bio.1': 'Ingeniero de Software con más de <strong>3 años de experiencia en backend con Java y Spring Boot</strong>, incluyendo diseño e implementación de arquitecturas de microservicios. Actualmente ejerzo como Analista de Software, lo que ha reforzado mi visión técnica desde la perspectiva de requisitos, viabilidad y calidad arquitectónica, además del liderazgo técnico y la mentoría dentro del equipo.',
+    'bio.1': 'Ingeniero de Software con más de <strong>4 años de experiencia en backend con Java y Spring Boot</strong>, incluyendo diseño e implementación de arquitecturas de microservicios. Actualmente ejerzo como Analista de Software, lo que ha reforzado mi visión técnica desde la perspectiva de requisitos, viabilidad y calidad arquitectónica, además del liderazgo técnico y la mentoría dentro del equipo.',
 
     'label.stack': 'Stack técnico',
     'label.projects': 'Proyectos destacados',
@@ -176,7 +176,7 @@ window.I18N = {
     'meta.languages': 'Languages',
     'meta.languages.value': 'Spanish · English B2',
 
-    'bio.1': 'Software Engineer with over <strong>3 years of backend experience in Java and Spring Boot</strong>, including the design and implementation of microservice architectures. I currently work as a Software Analyst, which has sharpened my technical judgement around requirements, feasibility and architectural quality, as well as technical leadership and mentoring within the team.',
+    'bio.1': 'Software Engineer with over <strong>4 years of backend experience in Java and Spring Boot</strong>, including the design and implementation of microservice architectures. I currently work as a Software Analyst, which has sharpened my technical judgement around requirements, feasibility and architectural quality, as well as technical leadership and mentoring within the team.',
 
     'label.stack': 'Tech stack',
     'label.projects': 'Featured projects',
